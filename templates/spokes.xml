@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Spokes</Name>
+  <Repository>ghcr.io/pcbeeqc/spokes:latest</Repository>
+  <Registry>https://github.com/PCBeeQC/Spokes/pkgs/container/spokes</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/PCBeeQC/Spokes/issues</Support>
+  <Project>https://github.com/PCBeeQC/Spokes</Project>
+  <Overview>Spokes is a self-hosted voice, video, and chat server built on .NET, LiveKit, and Casdoor. It features secure identity provider integration, automated backups, and file-based data persistence with complete data ownership.</Overview>
+  <Category>Network:Messenger Network:Voice Network:Video Cloud: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/PCBeeQC/Spokes/main/unraid/spokes.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/PCBeeQC/Spokes/main/Spokes_Server/Spokes_Server/wwwroot/spokes-org-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Spokes is a self-hosted voice, video, and chat server built on .NET, LiveKit, and Casdoor. It features secure identity provider integration, automated backups, and file-based data persistence with complete data ownership.</Description>
+  
+  <!-- Network Port Mappings -->
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="The port for the Spokes Web UI interface." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  
+  <Config Name="Voice TCP Fallback Port" Target="7881" Default="7881" Mode="tcp" Description="LiveKit TCP fallback port for voice traffic. Must be mapped 1-to-1." Type="Port" Display="always" Required="true" Mask="false">7881</Config>
+  
+  <Config Name="Voice UDP Port Range" Target="50000-50499" Default="50000-50499" Mode="udp" Description="LiveKit UDP port range for voice/video traffic. Must be mapped 1-to-1." Type="Port" Display="always" Required="true" Mask="false">50000-50499</Config>
+  
+  <!-- Volume Paths -->
+  <Config Name="App Data Path" Target="/data" Default="/mnt/user/appdata/spokes/" Mode="rw" Description="Persistent data folder where configuration, DB, and logs are stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/spokes/</Config>
+  
+  <!-- App Configuration Environment Variables -->
+  <Config Name="Master Password" Target="SPOKES_MASTER_PASSWORD" Default="" Mode="" Description="Required. The master password used to securely encrypt the escrow keys for Public and Team channels. Do not lose this password!" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+
+  <Config Name="Voice UDP Start Port" Target="Spokes_Voice_UDP_Start_Port" Default="50000" Mode="" Description="The starting port for LiveKit UDP voice/video traffic. Must match the host UDP port mapping." Type="Variable" Display="advanced" Required="true" Mask="false">50000</Config>
+  
+  <Config Name="Voice UDP Port Count" Target="Spokes_VOICE_UDP_PORT_COUNT" Default="500" Mode="" Description="The number of UDP ports for LiveKit. Must match the size of the host UDP port range." Type="Variable" Display="advanced" Required="true" Mask="false">500</Config>
+  
+  <Config Name="Voice Fallback Port" Target="Spokes_Voice_Fallback_Port" Default="7881" Mode="" Description="TCP fallback port for LiveKit. Must match the host TCP fallback port mapping." Type="Variable" Display="advanced" Required="true" Mask="false">7881</Config>
+
+  <Config Name="Data Path Variable" Target="DataPath" Default="/data" Mode="" Description="Internal container data path. Do not change unless you have a custom folder layout inside the container." Type="Variable" Display="advanced" Required="false" Mask="false">/data</Config>
+</Container>

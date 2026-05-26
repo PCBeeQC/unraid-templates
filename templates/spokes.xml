@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/PCBeeQC/unraid-templates/issues</Support>
+  <Support>https://forum.spokes.sh/</Support>
   <Project>https://spokes.sh</Project>
   <Overview>Spokes is a self-hosted voice, video, and chat server built on .NET, LiveKit, and Casdoor. It features secure identity provider integration, automated backups, and file-based data persistence with complete data ownership.</Overview>
   <Category>Network:Messenger Network:Voice Network:Video Cloud: Productivity:</Category>

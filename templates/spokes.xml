@@ -34,12 +34,4 @@
   
   <!-- App Configuration Environment Variables -->
   <Config Name="Master Password" Target="SPOKES_MASTER_PASSWORD" Default="" Mode="" Description="Required. The master password used to securely encrypt the escrow keys for Public and Team channels. Do not lose this password!" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-
-  <Config Name="Voice UDP Start Port" Target="Spokes_Voice_UDP_Start_Port" Default="50000" Mode="" Description="The starting port for LiveKit UDP voice/video traffic. Must match the host UDP port mapping." Type="Variable" Display="advanced" Required="true" Mask="false">50000</Config>
-  
-  <Config Name="Voice UDP Port Count" Target="Spokes_VOICE_UDP_PORT_COUNT" Default="500" Mode="" Description="The number of UDP ports for LiveKit. Must match the size of the host UDP port range." Type="Variable" Display="advanced" Required="true" Mask="false">500</Config>
-  
-  <Config Name="Voice Fallback Port" Target="Spokes_Voice_Fallback_Port" Default="7881" Mode="" Description="TCP fallback port for LiveKit. Must match the host TCP fallback port mapping." Type="Variable" Display="advanced" Required="true" Mask="false">7881</Config>
-
-  <Config Name="Data Path Variable" Target="DataPath" Default="/data" Mode="" Description="Internal container data path. Do not change unless you have a custom folder layout inside the container." Type="Variable" Display="advanced" Required="false" Mask="false">/data</Config>
 </Container>

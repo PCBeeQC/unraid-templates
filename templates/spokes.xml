@@ -10,7 +10,7 @@
   <Support>https://forum.spokes.sh/</Support>
   <Project>https://spokes.sh</Project>
   <Overview>Spokes is the simple, fully-featured self-hosted alternative to popular cloud chat apps. A powerful chat platform that runs entirely on your own infrastructure. Easy control and ownership of your data.</Overview>
-  <Category>Network:Messenger Network:Voice Network:Video Cloud: Productivity:</Category>
+  <Category>Network:Messenger Cloud: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/PCBeeQC/unraid-templates/main/templates/spokes.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/PCBeeQC/unraid-templates/main/logo.png</Icon>

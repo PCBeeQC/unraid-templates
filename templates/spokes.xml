@@ -27,7 +27,7 @@
   
   <Config Name="Voice TCP Fallback Port" Target="7881" Default="7881" Mode="tcp" Description="LiveKit TCP fallback port for voice traffic. Must be mapped 1-to-1." Type="Port" Display="always" Required="true" Mask="false">7881</Config>
   
-  <Config Name="Voice UDP Port Range" Target="50000-50499" Default="50000-50499" Mode="udp" Description="LiveKit UDP port range for voice/video traffic. Must be mapped 1-to-1." Type="Port" Display="always" Required="true" Mask="false">50000-50499</Config>
+  <Config Name="Voice UDP Port Range" Target="30000-30499" Default="30000-30499" Mode="udp" Description="LiveKit UDP port range for voice/video traffic. Must be mapped 1-to-1." Type="Port" Display="always" Required="true" Mask="false">30000-30499</Config>
   
   <!-- Volume Paths -->
   <Config Name="App Data Path" Target="/data" Default="/mnt/user/appdata/spokes/" Mode="rw" Description="Persistent data folder where configuration all Spokes data is stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/spokes/</Config>
